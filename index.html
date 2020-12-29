@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge; chrome=1" />
+
+    <link rel="stylesheet" href="./reset.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Monoton&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Ashley Stith - Weather Dashboard</title>
+
+  </head>
+  <body>
+    <header id = "header" class="jumbotron">
+
+        <h1 class="display-3 center">ACS Weather Dashboard</h1>
+
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-3 left-content">
+                <h4>Search for a city:</h4>
+                <div class = "searchDiv">
+
+                </div>
+            </div>
+            <div class="col-9 main-content">
+                <div id="snapshotDiv" class="card">
+                  <div id="snapshot" class="card-body">
+
+                  </div>
+                </div>
+                <div id ="forecastDiv" class = "card">
+                  <div id = "forecast" class = "card-body">
+                    <div id ="forecastHeader"></div>
+                    <div class="container">
+                      <div class="row">
+                        <div id = "forecast1" class="col daily center"></div>
+                        <div id = "forecast2" class="col daily center"></div>
+                        <div id = "forecast3" class="col daily center"></div>
+                        <div id = "forecast4" class="col daily center"></div>
+                        <div id = "forecast5" class="col daily center"></div>
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <footer class="fixed-bottom center">
+        <p class="center-content">Ashley Stith - HW6 Weather Dashboard - 19 DEC 2020 **Extended to 29 DEC 2020</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+
+</html>

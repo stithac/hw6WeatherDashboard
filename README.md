@@ -5,7 +5,7 @@ This Application runs in the browser and is a simple weather dashboard that allo
 
 The application display is a dashboard with sections for the current weather conditions and for the next 5 days.The current weather is displayed at the top and includes the city name, current date, temperature, humidity, wind speed and uv index.  The 5-day forecast is displayed below and includes the date, temperature and humidity for each date. When a user clicks the search button, the city is saved to their browser's localStorage. Once the page is re-loaded, all previously searched cities are displayed on the page. Link to application: https://stithac.github.io/hw6WeatherDashboard/
 
-![Alt text](./screenshot.png?raw=true)
+![Screenshot](/screenshot.PNG?raw=true)
 
 ## Features
 * Application calls the buildDashboard() function on load.  This function builds out the display and checks to see if there are any previous searches saved in localStorage.  If so, the search results are included on the display.

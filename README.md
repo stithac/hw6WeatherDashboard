@@ -11,6 +11,14 @@ The application display is a dashboard with sections for the current weather con
 * Application calls the buildDashboard() function on load.  This function builds out the display and checks to see if there are any previous searches saved in localStorage.  If so, the search results are included on the display.
 * Once a user types in a city name and clicks a Search button, the OpenWeatherMap API is called and the search results are displayed.
     * If the city is not included in the localStorage, it is added to localStorage and to the display on the left-content div.
+* If the UV index is 0-2, it is given the class of low
+    * Low uv indexes are displayed in green font
+* If the UV index is 3-5, it is given the class of moderate
+    * Low uv indexes are displayed in yellow font
+* If the UV index is 6-7, it is given the class of high
+    * Low uv indexes are displayed in orange font
+* If the UV index is over 7, it is given the class of very high
+    * Low uv indexes are displayed in red font
 
 ## Setup/Installation Requirements
 * Clone this repository.

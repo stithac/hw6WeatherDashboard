@@ -54,7 +54,7 @@ function buildDashboard(){
                 $(li).text(cities[i]);
                 cityList.prepend(li);
         }
-        
+
         getCity(cities[cities.length - 1]);
     }
 
@@ -131,6 +131,15 @@ function displayInfo(response, url){
 
         var uv = res.current.uvi;
             $(uvEl).text("UV Index: " + uv);
+            if(parseInt(uv) <= 2){
+                $(uvEl).attr("class", "low");
+            }else if(parseInt(uv) > 2 && parseInt(uv) <= 5){
+                $(uvEl).attr("class", "moderate");
+            }else if(parseInt(uv) > 5 && parseInt(uv) <= 7){
+                $(uvEl).attr("class", "high");
+            }else {
+                $(uvEl).attr("class", "very-high");
+            }
 
         var name = response.city.name;
 

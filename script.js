@@ -76,7 +76,7 @@ function getCity(input){
             console.log(cities);
         }
 
-    var queryURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + input + "&appid=" + apiKey + "&units=imperial";
+    var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + input + "&appid=" + apiKey + "&units=imperial";
 
     console.log(queryURL);
     searchCity(queryURL);
@@ -116,7 +116,7 @@ function displayInfo(response, url){
     }).then(function(res) {
         console.log(res);
 
-        var icon = "http://openweathermap.org/img/wn/" + res.current.weather[0].icon + ".png";
+        var icon = "https://openweathermap.org/img/wn/" + res.current.weather[0].icon + ".png";
             $(weatherIcon).attr("src", icon);
             console.log(icon);
 
@@ -166,7 +166,7 @@ function displayInfo(response, url){
 
             $(daily).text((date.getMonth()+1) + "/" + date.getDate() + "/" + date.getFullYear());
 
-            icon = "http://openweathermap.org/img/wn/" + res.daily[i].weather[0].icon + ".png";
+            icon = "https://openweathermap.org/img/wn/" + res.daily[i].weather[0].icon + ".png";
             console.log(icon);
 
             $(weather).attr("src", icon);

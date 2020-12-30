@@ -27,6 +27,7 @@ buildDashboard(); //function invoked on page load
 //buildDashboard() function is called when the page loads.
 //Builds initial page with placeholder divs
 function buildDashboard(){
+
     console.log("*** Start of buildDashboard() function ***");
 
     $(".searchDiv").append(cityInputEl);
@@ -62,14 +63,14 @@ function buildDashboard(){
 function getCity(input){
     console.log(input); //testing
 
-    $(cityListLi).text(input);
+
 
     //Check to see if the input is in the cities array.  If not, the variable item will be undefined.  If it is, item will equal the city
     var item = cities.find(item => item === input);
 
         //If the city is not in the array, push the input to the cities array and prepend to the cityList in the left nav
         if(item === undefined){
-
+            $(cityListLi).text(input);
             cities.push(input);
 
             cityList.prepend(cityListLi);
@@ -105,7 +106,6 @@ function searchCity(url){
     $(cityInputEl).val("");
 
     localStorage.setItem("cities", JSON.stringify(cities)); //Updates cities array in local storage
-
 }
 
 //displayInfo() function makes a second API call to get more information about the city. The city information is then displayed on the page

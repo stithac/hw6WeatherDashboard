@@ -4,8 +4,8 @@ var apiKey = "cf269a69cae8b944e13e39ba3072c250";
 var cityInputEl = $("<input>");
 var cityList = $("<ul>");
     cityList.attr("class", "list-group");
-var cityListLi = $("<li>");
-    cityListLi.attr("class", "list-group-item cityLi");
+// var cityListLi = $("<li>");
+//     cityListLi.attr("class", "list-group-item cityLi");
 var cityNameLbl = $("<h3>");
 var weatherIcon = $("<img>");
     weatherIcon.attr("class", "icon");
@@ -63,13 +63,13 @@ function buildDashboard(){
 function getCity(input){
     console.log(input); //testing
 
-
-
     //Check to see if the input is in the cities array.  If not, the variable item will be undefined.  If it is, item will equal the city
     var item = cities.find(item => item === input);
 
         //If the city is not in the array, push the input to the cities array and prepend to the cityList in the left nav
         if(item === undefined){
+            var cityListLi = $("<li>");
+            cityListLi.attr("class", "list-group-item cityLi");
             $(cityListLi).text(input);
             cities.push(input);
 
@@ -205,5 +205,13 @@ $(searchBtn).on("click",function(event){
         alert("Enter city name");
     }
 });
+
+$("#clear").on("click",function(event){
+
+    event.preventDefault();
+    console.log("Clear button clicked");
+    localStorage.clear();
+    location.reload();
+})
 
 

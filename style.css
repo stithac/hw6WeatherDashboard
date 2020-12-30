@@ -87,7 +87,7 @@ input{
 }
 
 #instructions{
-    color:lightgray;
+    color:lightgray !important;
 }
 
 .daily{

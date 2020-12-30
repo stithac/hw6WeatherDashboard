@@ -66,6 +66,10 @@ input{
     background-color: lightgray;
 }
 
+.cityLi:hover{
+    cursor: pointer;
+}
+
 .icon{
     display:inline;
     vertical-align: top;
@@ -80,6 +84,10 @@ input{
 #snapshotDiv{
     background-color:black;
     color: lightgray;
+}
+
+#instructions{
+    color:lightgray;
 }
 
 .daily{
